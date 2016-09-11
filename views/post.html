@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/admin.css" rel="stylesheet">
+    <script src="../js/jquery-2.2.0.min.js"></script>
+
+    <script src="../js/post.js"></script>
+    <title>发布页面</title>
+
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <div class="btn-group">
+            <button id="logout">退出</button>
+            <button id="alter">修改密码</button>
+        </div>
+    </div>
+    <form class="news-detail" action='' id="post" name="post" method="post">
+        <div class="column">
+            <span>articleID</span>
+            <input id="articleID" type="text">
+        </div>
+        <div class="column">
+            <span>module</span>
+            <input id="module" type="text">
+        </div>
+        <div class="column">
+            <span>title</span>
+            <input id="title" type="text">
+        </div>
+        <div class="column">
+            <span>img</span>
+            <input id='img' type="file" name="pic"/>
+
+            <!--<input id="img" type="image">-->
+        </div>
+        <div class="column">
+            <span>abstract</span>
+            <!--<input id="content" type="text">-->
+            <input id="abstract" type="text">
+
+        </div>
+        <div class="column">
+            <span>content</span>
+            <!--<input id="content" type="text">-->
+            <textarea id="content" ></textarea>
+
+        </div>
+        <!--<button class="submit">提交/button>-->
+        <input type="submit" id="submit" class="submit" value="提交">
+
+
+    </form>
+
+
+</div>
+
+</body>
+</html>

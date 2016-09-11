@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/admin.css" rel="stylesheet">
+    <script src="../js/jquery-2.2.0.min.js"></script>
+
+    <script src="../js/admin.js"></script>
+    <title>管理页面</title>
+
+</head>
+<body>
+<div class="content">
+<div class="header">
+    <div class="btn-group">
+        <button id="logout">退出</button>
+        <button id="alter">修改密码</button>
+    </div>
+</div>
+<div class="news-content">
+
+    <div class="A-news" id="AContainer">
+        <p>公司动态</p>
+        <button class="post" name="moduleA">发布</button>
+        <div class="news" id="newsA">
+            <span class="title" id="titleA">title</span>
+            <span class="date" id="dateA">date</span>
+            <div class="btn-group">
+                <button id="modifyA" class="alter">修改</button>
+                <button id="deleteA" class="delete">删除</button>
+            </div>
+        </div>
+    </div>
+    <div class="B-news" id="BContainer">
+        <p>行业动态</p>
+        <button class="post" name="moduleB">发布</button>
+
+        <div class="news" id="newsB">
+            <span class="title" id="titleB">title</span>
+            <span class="date" id="dateB">date</span>
+            <div class="btn-group">
+                <button id="modifyB" class="alter">修改</button>
+                <button id="deleteB" class="delete">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
