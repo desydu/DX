@@ -1,0 +1,150 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    /*background-color: antiquewhite;*/
+
+}
+.content{
+    display:flex;
+    flex-direction: column;
+
+    width:800px;
+    min-height:600px;
+    margin:auto;
+    margin-top:10px;
+
+    background-color:white;
+    border:6px solid antiquewhite ;
+    border-radius: 4px;
+
+    padding:5px;
+
+}
+.header{
+    width:100%;
+    text-align: right;
+    background-color: cornsilk;
+    opacity:0.8;
+}
+.header .btn-group{
+    width:200px;
+    margin-left:600px;
+
+}
+.header .btn-group button{
+    display:inline-block;
+    width:60px;
+    font-size:14px;
+    line-height: 26px;
+    /*background-color: white;*/
+    background-color: cornsilk;
+    border:none;
+
+    /*border-color:cadetblue ;*/
+    /*border:2px solid cadetblue;*/
+    /*border-radius:5px;*/
+
+}
+.news-content{
+    width: 100%;
+}
+.news-content p{
+    display:inline-block;
+
+    text-align: center;
+    margin-top:10px;
+}
+.news-content .post{
+    display:inline-block;
+    border:1px solid cadetblue;
+    border-radius:5px;
+    background-color: white;
+    font-size:14px;
+    line-height: 26px;
+    width:50px;
+    margin-left:20px;
+}
+.news-content .A-news{
+    display: inline-block;
+    width:50%;
+
+    vertical-align: top;
+
+}
+.news-content .B-news{
+    display: inline-block;
+    width:48%;
+    vertical-align: top;
+
+}
+
+.news-content .news{
+    /*position: relative;*/
+    margin-top:5px;
+    width:100%;
+    font-size:14px;
+    /*line-height: 20px;*/
+}
+.news-content .news .title{
+    display: inline-block;
+
+    width:35%;
+}
+.news-content .news .date{
+    display: inline-block;
+
+    width:30%;
+}
+.news-content .btn-group{
+    display:inline-block;
+    width:30%;
+
+    /*position: absolute;*/
+    /*right:0;*/
+}
+.news-content .btn-group button{
+    width:40%;
+    background-color: white;
+
+
+    border:1px solid cadetblue;
+    border-radius:5px;
+    font-size:14px;
+    line-height: 26px;
+}
+
+
+.news-detail .column{
+    margin-top:10px;
+    width:100%;
+font-size:16px;
+    text-align: center;
+}
+.news-detail span{
+    display:inline-block;
+    width:20%;
+}
+.news-detail input{
+    width:70%;
+    line-height:20px;
+}
+.news-detail .submit{
+
+    border:1px solid cadetblue;
+    border-radius:5px;
+    background-color: white;
+    font-size:14px;
+    line-height: 26px;
+    width:50px;
+    margin-top:20px;
+    margin-left:55%;
+
+}
+.news-detail textarea{
+    height:200px;
+    width:70%;
+    line-height:20px;
+
+}
