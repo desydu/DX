@@ -15,7 +15,7 @@ $(document).ready(function(){
             $.ajax({
                 type:"post",
                 //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-                url:"http://52.38.232.39:8080/article/resetPassword",
+                url:"https://fund2-narutooturan.c9users.io/article/resetPassword",
                 async: false,
                 //data:"userName="+user+"&password="+pass,
                 data:{'userName' : user,'oldPassword' : oldPass , 'newPassword' : newPass},

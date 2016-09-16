@@ -5,7 +5,7 @@
 $(document).ready(function(){
 
     //$('#art-content').html('asfd+<img src="../source/6.png">+adsf');
-    //$('#art-content').html('asfd <img src="http://localhost:8080/upload_900473f8b77a9efcd0651f0a71432a36"> adsf');
+    //$('#art-content').html('asfd <img src="https://fund2-narutooturan.c9users.io/upload_900473f8b77a9efcd0651f0a71432a36"> adsf');
 
     var url=window.location.href;
 
@@ -22,7 +22,7 @@ function loadInfo(val){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/articleInfo",
+        url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
         data:{'articleID' : val},
 
         beforeSend:function(){},
@@ -54,7 +54,7 @@ function loadInfo(val){
                     //content= content.replace(reg,"<br>");
                     //$('#art-content').html(msg.data.content);
 
-                    $('#art-content img').attr('src','http://52.38.232.39:8080/'+msg.data.filePath.slice(7));
+                    $('#art-content img').attr('src','https://fund2-narutooturan.c9users.io/'+msg.data.filePath.slice(7));
                     //var index=content.indexOf("<img>");
 
 
@@ -80,7 +80,7 @@ function getImage(path){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/articleImg",
+        url:"https://fund2-narutooturan.c9users.io/article/articleImg",
         data:{'filePath' : path},
 
         beforeSend:function(){},

@@ -2,6 +2,8 @@
  * Created by duxi on 16/9/8.
  */
 
+//var app = require("../../app.js");
+
 $(document).ready(function(){
 
     var url=window.location.href;
@@ -29,7 +31,9 @@ $(document).ready(function(){
 
 
         $('#logout').click(function(){
-            window.location.href='home.html'
+            global.userIsLogged = false;
+            alert(global.userIsLogged);
+            window.location.href='home.html';
         });
         $('#alter').click(function(){
             window.location.href='psw.html'
@@ -63,7 +67,7 @@ function loadArgument(){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/moduleArticleID",
+        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
         data:{'module' : 'moduleA'},
         beforeSend:function(){},
         success:function(msg){
@@ -87,7 +91,7 @@ function loadArgument(){
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
 
-        url:"http://52.38.232.39:8080/article/moduleArticleID",
+        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
         data:{'module' : 'moduleB'},
 
 
@@ -122,7 +126,7 @@ function loadInfo(articleIDA){
             type:"post",
             //url?要获取数据的url （默认为当前页地址）发送请求的地址。
             async: false,
-            url:"http://52.38.232.39:8080/article/articleInfo",
+            url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
             data:{'articleID' : articleIDA[i]},
 
             beforeSend:function(){},
@@ -200,7 +204,7 @@ function del(val,info,module){
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         // async: false,
 
-        url:"http://52.38.232.39:8080/article/deleteArticle",
+        url:"https://fund2-narutooturan.c9users.io/article/deleteArticle",
         data:{'articleID' : info,'module':module  },
 
         beforeSend:function(){},

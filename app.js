@@ -1,9 +1,16 @@
 
 
 var express = require('express');
-
+var session = require('express-session');
 var app = express();
 
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'fund',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
 
 //dx
 //var session = require('express-session');
@@ -56,7 +63,7 @@ var app = express();
 app.use(express.static('source'));
 app.use(express.static('YS'));
 //新添加代码3
-app.use(express.static('views'));
+//app.use(express.static('views'));
 
 //app.use(express.limit('4M'));
 app.listen(8080);
@@ -89,7 +96,47 @@ var util = require('./Util/util');
 
 //
 
+app.use('/admin.html', function(req, res, next) {
 
+    if (!req.session.userName) {
+        res.redirect('/home.html');
+    }
+    
+    next();
+});
+app.use('/post.html', function(req, res, next) {
+
+    if (!req.session.userName) {
+        res.redirect('/home.html');
+    }
+    
+    next();
+});
+app.use('/psw.html', function(req, res, next) {
+
+    if (!req.session.userName) {
+        res.redirect('/home.html');
+    }
+    
+    next();
+});
+
+app.get('/home.html', function(req, res) {
+
+    res.sendFile(__dirname + '/views/home.html');
+});
+app.get('/admin.html', function(req, res) {
+
+    res.sendFile(__dirname + '/views/admin.html');
+});
+app.get('/post.html', function(req, res) {
+
+    res.sendFile(__dirname + '/views/post.html');
+});
+app.get('/psw.html', function(req, res) {
+
+    res.sendFile(__dirname + '/views/psw.html');
+});
 
 //杜希的网站begin
 
@@ -323,9 +370,24 @@ app.post(login,function(req,res) {
             res.send({'success' : 'no','data' : '密码不对'});
             return;
         }
+        
+        //In this we are assigning email to sess.email variable.
+        //email comes from HTML page.
+        req.session.userName=req.body.userName;
         res.send({'success' : 'yes','data' : '验证通过'});
     })
-})
+});
+
+var logout = kArticle + 'logout';
+app.post(logout,function(req,res) {
+    req.session.destroy(function(err) {
+      if(err) {
+        console.log(err);
+      } else {
+        res.send({'success' : 'yes','data' : 'success'});
+      }
+    });
+});
 
 //7.修改密码
 var resetPassword = kArticle + 'resetPassword';

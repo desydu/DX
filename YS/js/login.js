@@ -9,8 +9,9 @@ $(document).ready(function(){
 
     // console.log('0');
 
-    $("#login").submit(function(){
-
+    $("#login").submit(function(e){
+        
+        e.preventDefault();
         login();
 
     });
@@ -22,6 +23,7 @@ $(document).ready(function(){
 });
 
 function login(){
+    
     var user=$("#username").val();
     var pass=$("#password").val();
 
@@ -32,7 +34,7 @@ function login(){
     $.ajax({
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-        url:"http://52.38.232.39:8080/article/login",
+        url:"https://fund2-narutooturan.c9users.io/article/login",
         //data:"userName="+user+"&password="+pass,
         data:{'userName' : user,'password':pass},
         //data: JSON.stringify(Jdata),

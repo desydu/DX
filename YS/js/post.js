@@ -49,8 +49,9 @@ $(document).ready(function(){
 
 
 
-        $("#post").submit(function(){
-
+        $("#post").submit(function(e){
+            e.preventDefault();
+            
             var articleID=$('#articleID').val();
             var title=$('#title').val();
             var abstract=$('#abstract').val();
@@ -99,7 +100,7 @@ $(document).ready(function(){
             $.ajax({
                 type:"post",
                 //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-                url:"http://localhost:8080/article/addArticle",
+                url:"https://fund2-narutooturan.c9users.io/article/addArticle",
                 //data:"userName="+user+"&password="+pass,
                 // data:{'articleID' : articleID,'title' : title , 'content' : content,'module':module,'files':'','editTime':editTime},
                 // data:{'articleID' : '','title' :'' , 'content' : '','module':'','files':'','editTime':''},
@@ -152,7 +153,7 @@ function loadInfo(val){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/articleInfo",
+        url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
         data:{'articleID' : val},
 
         beforeSend:function(){},
@@ -174,7 +175,7 @@ function loadInfo(val){
 
                 if(msg.data.filePath){
                     //getImage(msg.data.filePath);
-                    var url='http://52.38.232.39:8080/'+msg.data.filePath.slice(7);
+                    var url='https://fund2-narutooturan.c9users.io/'+msg.data.filePath.slice(7);
                     console.log(url);
                     //$("#img")[0].files[0].value=url;
                     //$("#img")[0].files.value=url;
@@ -200,7 +201,7 @@ function getImage(path){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/articleImg",
+        url:"https://fund2-narutooturan.c9users.io/article/articleImg",
         data:{'filePath' : path},
 
         beforeSend:function(){},

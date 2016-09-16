@@ -51,7 +51,7 @@ function loadArgument(){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"http://52.38.232.39:8080/article/moduleArticleID",
+        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
         data:{'module' : 'moduleA'},
         beforeSend:function(){},
         success:function(msg){
@@ -75,7 +75,7 @@ function loadArgument(){
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
 
-        url:"http://52.38.232.39:8080/article/moduleArticleID",
+        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
         data:{'module' : 'moduleB'},
 
 
@@ -111,7 +111,7 @@ function loadInfo(articleIDA){
             type:"post",
             //url?要获取数据的url （默认为当前页地址）发送请求的地址。
             async: false,
-            url:"http://52.38.232.39:8080/article/articleInfo",
+            url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
             data:{'articleID' : articleIDA[i]},
 
             beforeSend:function(){},
