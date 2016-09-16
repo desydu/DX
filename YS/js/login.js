@@ -34,7 +34,7 @@ function login(){
     $.ajax({
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-        url:"https://fund2-narutooturan.c9users.io/article/login",
+        url:"http://139.224.40.56:8080/article/login",
         //data:"userName="+user+"&password="+pass,
         data:{'userName' : user,'password':pass},
         //data: JSON.stringify(Jdata),

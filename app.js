@@ -63,7 +63,7 @@ app.use(session({
 app.use(express.static('source'));
 app.use(express.static('YS'));
 //新添加代码3
-//app.use(express.static('views'));
+app.use(express.static('views'));
 
 //app.use(express.limit('4M'));
 app.listen(8080);

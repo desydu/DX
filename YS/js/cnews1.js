@@ -22,7 +22,7 @@ function loadInfo(val){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
+        url:"http://139.224.40.56:8080/article/articleInfo",
         data:{'articleID' : val},
 
         beforeSend:function(){},
@@ -80,7 +80,7 @@ function getImage(path){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"https://fund2-narutooturan.c9users.io/article/articleImg",
+        url:"http://139.224.40.56:8080/article/articleImg",
         data:{'filePath' : path},
 
         beforeSend:function(){},

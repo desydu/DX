@@ -33,8 +33,8 @@ $(document).ready(function(){
             $.ajax({
                 type:"post",
                 //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-                url:"https://fund2-narutooturan.c9users.io/article/logout",
-        
+                url:"http://139.224.40.56:8080/article/logout",
+
                 beforeSend:function(){},
         
                 success:function(msg){
@@ -75,7 +75,7 @@ function loadArgument(){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
+        url:"http://139.224.40.56:8080/article/moduleArticleID",
         data:{'module' : 'moduleA'},
         beforeSend:function(){},
         success:function(msg){
@@ -99,7 +99,7 @@ function loadArgument(){
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
 
-        url:"https://fund2-narutooturan.c9users.io/article/moduleArticleID",
+        url:"http://139.224.40.56:8080/article/moduleArticleID",
         data:{'module' : 'moduleB'},
 
 
@@ -134,7 +134,7 @@ function loadInfo(articleIDA){
             type:"post",
             //url?要获取数据的url （默认为当前页地址）发送请求的地址。
             async: false,
-            url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
+            url:"http://139.224.40.56:8080/article/articleInfo",
             data:{'articleID' : articleIDA[i]},
 
             beforeSend:function(){},
@@ -212,7 +212,7 @@ function del(val,info,module){
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         // async: false,
 
-        url:"https://fund2-narutooturan.c9users.io/article/deleteArticle",
+        url:"http://139.224.40.56:8080/article/deleteArticle",
         data:{'articleID' : info,'module':module  },
 
         beforeSend:function(){},

@@ -100,7 +100,7 @@ $(document).ready(function(){
             $.ajax({
                 type:"post",
                 //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-                url:"https://fund2-narutooturan.c9users.io/article/addArticle",
+                url:"http://139.224.40.56:8080/article/addArticle",
                 //data:"userName="+user+"&password="+pass,
                 // data:{'articleID' : articleID,'title' : title , 'content' : content,'module':module,'files':'','editTime':editTime},
                 // data:{'articleID' : '','title' :'' , 'content' : '','module':'','files':'','editTime':''},
@@ -153,7 +153,7 @@ function loadInfo(val){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"https://fund2-narutooturan.c9users.io/article/articleInfo",
+        url:"http://139.224.40.56:8080/article/articleInfo",
         data:{'articleID' : val},
 
         beforeSend:function(){},
@@ -175,7 +175,7 @@ function loadInfo(val){
 
                 if(msg.data.filePath){
                     //getImage(msg.data.filePath);
-                    var url='https://fund2-narutooturan.c9users.io/'+msg.data.filePath.slice(7);
+                    var url='http://139.224.40.56:8080/'+msg.data.filePath.slice(7);
                     console.log(url);
                     //$("#img")[0].files[0].value=url;
                     //$("#img")[0].files.value=url;
@@ -201,7 +201,7 @@ function getImage(path){
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
         async: false,
-        url:"https://fund2-narutooturan.c9users.io/article/articleImg",
+        url:"http://139.224.40.56:8080/article/articleImg",
         data:{'filePath' : path},
 
         beforeSend:function(){},
