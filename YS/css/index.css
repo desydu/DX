@@ -132,13 +132,14 @@ position:absolute;
 }
 /*.collapse {width:736px;}*/
 
+
+
 /*首页banner*/
 
 .content .banner{
 
     width:100vw;
     /*height: 468px;*/
-
 
 
 }
@@ -236,11 +237,13 @@ position:absolute;
 }
 .content .news-center .news-content .news .article .art-title{
     font-size: 16px;
+    line-height:18px;
 
 }
 .content .news-center .news-content .news .article .art-content{
     /*font-size: 16px;*/
     opacity: 0.6;
+    line-height:18px;
 }
 
 /*首页业务图*/
@@ -272,6 +275,7 @@ position:absolute;
     display:inline-block;
     width:175px;
     text-align: center;
+
 }
 .content .partner .avatar .middle{
     margin:0 140px;
@@ -300,8 +304,8 @@ position:absolute;
 
     border:0;
     border-radius: 6px;
-    width:40%;
-    margin:50px 30%;
+    width:80%;
+    margin:50px 10%;
 
     /*padding:10px 50px;*/
 
@@ -598,7 +602,9 @@ vertical-align: middle;
 
 
 }
-
+.content .team-partner .partner1-intro p{
+    font-size:12px;
+}
 .content .team-manager .manager1{
     display:inline-block;
     width:33.3%;
@@ -705,6 +711,13 @@ vertical-align: middle;
     /*width:90%;*/
     /*margin-bottom:70px;*/
 /*}*/
+
+
+
+
+/*新闻中心 行业动态样式*/
+
+
 .content .cnews-banner{
     background: url("../img/cnews_banner.png") center;
 }
@@ -736,6 +749,7 @@ vertical-align: middle;
 
 }
 .content .cnews-content .news .article{
+
     display:inline-block;
     /*height:20px;*/
     width:80%;
@@ -744,7 +758,8 @@ vertical-align: middle;
 
     font-size:14px;
     line-height:14px;
-
+    color:black;
+    /*opacity:0.8;*/
     /*background-color: #C69B6B;*/
 }
 .content .cnews-content .news .article .art-title{
@@ -763,12 +778,15 @@ vertical-align: middle;
     display:block;
     margin:auto;
 }
-
+.content .new-foot{
+    margin-top:40px;
+}
 .content .cnews-content .cnews{
     /*display:block;*/
 }
 .content .cnews-content .pagination{
     /*display:none;*/
+
 }
 .content .cnews-content .pagination li{
     font-size:14px;
@@ -1191,11 +1209,14 @@ margin-bottom:70px;
         display:block;
         width:70%;
         text-align: center;
-        margin:0 auto;
+        margin:30px auto 0 auto;
+        /*margin-top:10px;*/
+
     }
     .content .partner .avatar .middle{
-        margin:0 auto;
+        /*margin:0 auto;*/
     }
+
     /*首页微信自适应*/
     .content .we-right img{
         display: none;
@@ -1339,11 +1360,5 @@ margin-bottom:70px;
     .content .team-banner{
         background: url("../img/banner_64.png") center;
         background-size: cover;      }
-
-}
-@media (max-width: 414px){
-
-
-
 
 }

@@ -54,7 +54,7 @@ function loadInfo(val){
                     //content= content.replace(reg,"<br>");
                     //$('#art-content').html(msg.data.content);
 
-                    $('#art-content img').attr('src','https://fund2-narutooturan.c9users.io/'+msg.data.filePath.slice(7));
+                    $('#art-content img').attr('src','http://139.224.40.56:8080/'+msg.data.filePath.slice(7));
                     //var index=content.indexOf("<img>");
 
 

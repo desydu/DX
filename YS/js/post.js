@@ -18,7 +18,11 @@ $(document).ready(function(){
         var date = new Date();
 
         var month=date.getMonth()+1;
-        console.log(date.getFullYear().toString().substring(2,4)+month+date.getDate());
+        if(month<10){
+            month='0'+month;
+        }
+
+        console.log(date.getFullYear()+'-'+month+'-'+date.getDate());
 
 
         var url=window.location.href;
@@ -63,7 +67,8 @@ $(document).ready(function(){
 
             content = content.replace (/[\r\n]/g, '<br/>');
 
-            var editTime=date.getFullYear().toString().substring(2,4)+month+date.getDate();
+            //var editTime=date.getFullYear().toString().substring(2,4)+month+date.getDate();
+            var editTime=date.getFullYear()+'-'+month+'-'+date.getDate();
 
             console.log(module);
 
@@ -95,7 +100,7 @@ $(document).ready(function(){
 
             console.log($('#img').get(0).files[0]);
             console.log(formData.get('articleID'));
-            alert('');
+            //alert('');
 
             $.ajax({
                 type:"post",

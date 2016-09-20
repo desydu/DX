@@ -210,7 +210,7 @@ function del(val,info,module){
     $.ajax({
         type:"post",
         //url?要获取数据的url （默认为当前页地址）发送请求的地址。
-        // async: false,
+         async: false,
 
         url:"http://139.224.40.56:8080/article/deleteArticle",
         data:{'articleID' : info,'module':module  },
@@ -234,9 +234,16 @@ function del(val,info,module){
                 // $(document).reload();
                 $('.delete').click(function(){
 
-                    del($(this).val(),totalInfo[$(this).val()].articleID,totalInfo[$(this).val()].module);
+                    //del($(this).val(),totalInfo[$(this).val()].articleID,totalInfo[$(this).val()].module);
+                    del($(this).val(),totalInfo[$(this).val()].articleID,totalInfo[$(this).val()].module.replace('00',''));
 
-                })
+
+                });
+                $('.alter').click(function(){
+                    alter(totalInfo[$(this).val()].articleID);
+                    //del($(this).val(),totalInfo[$(this).val()].articleID,totalInfo[$(this).val()].module.replace('00',''));
+
+                });
 
             }else
             {
