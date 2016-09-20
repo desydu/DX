@@ -82,7 +82,7 @@ var options = {
     cert:fs.readFileSync(__dirname + '/ssl/key3/server.crt')
 };
 
-https.createServer(options,app).listen(8081);
+https.createServer(options,app).listen(80);
 
 var redis = require('redis');
 var client = redis.createClient('6379','127.0.0.1');
