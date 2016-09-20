@@ -66,7 +66,7 @@ app.use(express.static('YS'));
 app.use(express.static('views'));
 
 //app.use(express.limit('4M'));
-app.listen(80);
+app.listen(8080);
 //必须要body-parser，不然无法解析request的body参数
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -82,7 +82,7 @@ var options = {
     cert:fs.readFileSync(__dirname + '/ssl/key3/server.crt')
 };
 
-https.createServer(options,app).listen(80);
+https.createServer(options,app).listen(8081);
 
 var redis = require('redis');
 var client = redis.createClient('6379','127.0.0.1');
