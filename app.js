@@ -66,7 +66,7 @@ app.use(express.static('YS'));
 app.use(express.static('views'));
 
 //app.use(express.limit('4M'));
-app.listen(8080);
+app.listen(80);
 //必须要body-parser，不然无法解析request的body参数
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
